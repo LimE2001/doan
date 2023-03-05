@@ -4,7 +4,9 @@ body{
     font-weight: bold;
     font-size: 100%;
 }
+
 .the-left{
+    width: 321px;
     height: auto;
     border: 0px solid rgba(54, 52, 54, 0.315) ;
     box-shadow: 0px 0px 0px rgba(54, 52, 54, 0.315);
@@ -14,7 +16,11 @@ body{
     z-index: 2;
     border-radius: 60px 0px 0px 60px;
 }
+.the-left.active{
+    width: 130px;
+}
 .nav-bar{
+    position: relative;
     box-shadow: -5px 5px 5px rgba(54, 52, 54, 0.315);
     height: 24cm;
     display: flex;
@@ -23,8 +29,24 @@ body{
     justify-content: space-between;
     padding: 20px 0px 40px 0px;
     border-radius: 60px;
-    background-color:rgba(132, 0, 255, 0.575);
+    background-color:rgba(255, 0, 200, 0.5);
     margin: 0px 0px 0px 0px;
+}
+.nav-bar.active{
+    width: 100px;
+    display: flex;
+    align-content: flex-end;
+}
+.nav-bar.active .sidebar--item{
+    display: none;
+}
+.nav-bar.active .ic1{
+    margin: 30px 0px 100px 0px;
+}
+.nav-bar.active .nav-items a{
+    padding: 10px 10px 10px 0px;
+    margin: 0px 0px 10px 10px;
+    transition: .5s;
 }
 .ic1{
     font-size: 50px;
@@ -32,6 +54,7 @@ body{
     justify-content: center;
     margin: 30px 20px 100px 0px;
     padding:0px 0px 0px 0px;
+    transition: .5s;
 }
 a{
     text-decoration: none;
@@ -64,13 +87,15 @@ li{
 }
 .nav-items a:active, 
 .nav-bottom-items a:active{
-    background-color: #f7f7f7;
+    
     color: black;
 }
+
 #abc{
     background-color: #f7f7f7;
+    border-radius: 50p;
 }
-.icon-1{color: rgba(255, 0, 0, 0.3) ;}.icon-2{color: rgba(255, 187, 0, 0.3) ;}.icon-3{color: rgba(0, 247, 255, 0.3);}.icon-4{color: rgba(25, 0, 255, 0.3);}.icon-5{color: rgba(255, 0, 170, 0.3);}.icon-6{color: rgba(78, 7, 78, 0.3);}.icon-7{color: rgba(10, 1, 1, 0.3);}
+.icon-6{color: rgba(78, 7, 78, 0.3);}.icon-7{color: rgba(10, 1, 1, 0.3);}
 .the-right{
     height: auto;
     border: 0px solid rgba(54, 52, 54, 0.315) ;
@@ -81,6 +106,7 @@ li{
     border-radius: 0px 60px 60px 0px;
 }
 .iot{
+    color:rgba(255, 0, 200, 0.5);
     background-color: #ffffff;
     display: flex;
     align-items: center;
@@ -171,6 +197,16 @@ li{
 .ptc5{
     height: 177px;
     margin: 15px 0px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+}
+.avt{
+    height: 100px;
+    width: 100px;
 }
 .ptc6{
     background-color: #ffffff;
@@ -178,4 +214,38 @@ li{
     margin: 0px 0px 0px 0px;
     border-radius: 60px;
     box-shadow: 0px 0px 5px rgba(54, 52, 54, 0.315);
+}
+
+.water{
+    position: relative;
+    width: 250px;
+    height: 250px;
+    margin: 40px 0px 0px 60px;
+    border-radius: 50% 50% 50% 50% / 62% 50% 30% 38%;
+    box-shadow: inset 10px 10px 10px #0000000c, 15px 25px 10px #00000019,inset -10px -10px 15px #ffffffe5;
+    transition: 10s;
+}
+.water.active{
+    position: relative;
+    width: 260px;
+    height: 260px;
+    margin: 30px 0px 0px 90px;
+    border-radius: 43% 57% 30% 70% / 52% 30% 70% 48%;
+    box-shadow: inset 10px 10px 10px #e100ff0c, 15px 25px 10px #00000019,inset -10px -10px 15px #ffffffe5;
+    transition: 10s;
+}
+.water::before, .water::after{
+    position: absolute;
+    background-color: #fff;
+    content: '';
+    border-radius: 65% 35% 53% 47% / 64% 65% 35% 36%;
+    width: 20px;
+    height: 20px;
+    top: 50px;
+    left: 50px;
+}
+.water::after{
+    transform: translate(18px, -25px)
+                scale(0.7)
+                rotate(20deg);
 }
