@@ -178,27 +178,27 @@
     }
 }
 @media screen and (max-width:1124px) {
-    .nav-bar{
+    .nav-bar.active{
         width: 100px;
         display: flex;
         align-content: flex-end; 
     }
-    .nav-bar .sidebar--item{
+    .nav-bar.active .sidebar--item{
         display: none;
     }
-    .nav-bar .ic1{
+    .nav-bar.active .ic1{
         margin: 30px 0px 100px 0px;
     }
-    .nav-bar .nav-items a{
+    .nav-bar.active .nav-items a{
         padding: 10px 10px 10px 0px;
         margin: 0px 0px 10px 10px;
         transition: .5s;
     }
-    .the-left{
+    .the-left.active{
         width: 130px;
     }
     
-    .ptm4, .water{
+    .mg2{
         display: none;
     }
     .mg1{

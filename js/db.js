@@ -3,7 +3,7 @@ var nda = 0;
 function load(){
     //nhiệt độ
     nda = Math.floor(Math.random() * (100 - 1))+1;
-    document.getElementById('de1').innerHTML = nda + '°C';
+    document.getElementById('de1').innerHTML = nda + '%';
     var yValues = [100-nda,nda];
     var barColors = ["rgba(54, 52, 54, 0.1)","rgb(179, 19, 19,.8)"];
     new Chart("n_d", {
