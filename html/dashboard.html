@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="../css/db.css">
     <link rel="icon" href="../img/3.png" type="image/x-icon">
     <title>© coppyright by LimE &#128151; ʕ´•ᴥ•`ʔ</title>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 </head>
 <body>
     <div class="LimE-container">
@@ -64,38 +66,57 @@
                     </div>
                 </section>
             </div>
-
-
             <div class="col the-right">
                 <a class="iot" href="../html/dashboard.html">SMART FARM</a>
-                <div class="row mg1">
+                <div class="row mg">
                     <div class="col-sm-9 mg1">
-                        <div class="row mg1">
+                        <div class="row m1">
                             <div class="col-sm-3 ptm1">
-                                <div class="ptc1"></div>
+                                <div class="ptc1">
+                                    <p>Quantity:</p>
+                                </div>
                             </div>
                             <div class="col-sm-3 ptm1">
-                                <div class="ptc1"></div>
+                                <div class="ptc1">
+                                    <p>Quantity:</p>
+                                </div>
                             </div>
                             <div class="col-sm-3 ptm1">
-                                <div class="ptc1"></div>
+                                <div class="ptc1">
+                                    <p>Humidity 1:</p>
+                                    <i class="fas fa-burn icon1 ic"></i>
+                                    <div id="de1" class="right"></div>
+                                    <div class="chart"><canvas id="n_d"></canvas></div>
+                                </div>
                             </div>
                             <div class="col-sm-3 ptm1">
-                                <div class="ptc1"></div>
+                                <div class="ptc1">
+                                    <p>Humidity 2:</p>
+                                </div>
                             </div>
                             <div class="col-sm-6 ptm2">
-                                <div class="row ptc2"></div>
-                                <div class="row ptc2"></div>
+                                <div class="row ptc2">
+                                    <p>Temp 1:</p>
+                                    <i class="fas fa-temperature-low icon1 ic1"></i>
+                                </div>
+                                <div class="row ptc2">
+                                    <p>Temp 2:</p>
+                                    <i class="fas fa-temperature-low icon1 ic1"></i>
+                                </div>
                             </div>
                             <div class="col-sm-6 ptm2">
-                                <div class="ptc3"></div>
+                                <div class="ptc3">
+                                    <p>Light:</p>
+                                </div>
                             </div>
                             <div class="col ptm3">
-                                <div class="ptc4"></div>
+                                <div class="ptc4">
+                                    Chart
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col mg2">
+                    <div id="hi" class="col mg2">
                         <div class="ptm4">
                             <div class="ptc5">
                                 <img class="avt" src="../img/3.png" alt="AVT">
@@ -111,5 +132,6 @@
     </div>
 
 <script src="../js/index.js"></script>
+<script src="../js/db.js"></script>
 </body>
 </html>

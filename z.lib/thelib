@@ -8,7 +8,7 @@ body{
     
 }
 .the-left{
-    width: 130px;
+    width: 321px;
     height: auto;
     border: 0px solid rgba(54, 52, 54, 0.315) ;
     box-shadow: 0px 0px 0px rgba(54, 52, 54, 0.315);
@@ -19,7 +19,7 @@ body{
     border-radius: 60px 0px 0px 60px;
 }
 .the-left.active{
-    width: 321px;
+    width: 130px;
 }
 .nav-bar{
     position: relative;
@@ -29,36 +29,32 @@ body{
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-content: flex-end;
     padding: 20px 0px 40px 0px;
     border-radius: 60px;
     background-color:rgba(255, 0, 200, 0.5);
     margin: 0px 0px 0px 0px;
-    
 }
 .nav-bar.active{
-    align-content: normal;
-}
-.nav-bar .sidebar--item{
-    display: none;
+    display: flex;
+    align-content: flex-end;
 }
 .nav-bar.active .sidebar--item{
-    display:block;
+    display: none;
 }
 .nav-bar.active .ic1{
-    margin: 30px 20px 100px 0px;
+    margin: 30px 0px 100px 0px;
+}
+.nav-bar.active .nav-items a{
+    padding: 10px 10px 10px 0px;
+    margin: 0px 0px 10px 10px; 
+    transition: 0.3s;
 }
 .ic1{
     font-size: 50px;
     display: flex;
     justify-content: center;
-    margin: 30px 0px 100px 0px;
+    margin: 30px 20px 100px 0px;
     padding:0px 0px 0px 0px;
-    transition: 0.3s;
-}
-.nav-bar .nav-items a{
-    padding: 10px 10px 10px 0px;
-    margin: 0px 0px 10px 10px; 
     transition: 0.3s;
 }
 a{
@@ -69,16 +65,6 @@ li{
 }
 .nav-items a, 
 .nav-bottom-items a{
-    display:flex;
-    align-items:center;
-    margin: 0px 0px 10px 0px;
-    font-size: 100%;
-    color: #000;
-    padding: 10px 10px 10px 20px;
-    border-radius: 60px 0px 0px 60px;
-    transition: 0.3s;
-}
-.nav-bar.active .nav-items a{
     display:flex;
     align-items:center;
     margin: 0px 0px 10px 0px;
@@ -134,3 +120,52 @@ li{
     box-shadow: 5px 5px 5px rgba(54, 52, 54, 0.315);
 }
 
+@media screen and (max-width:1620px) {
+    .mg1{
+        width:100%;
+        transition: 1s;
+    }
+    .mg2{
+        display: none;
+    }
+    .water{
+        display: none;
+    }
+    .mg1.active{
+       max-width: 75%;
+       transition: 1s;
+    }
+    .mg2.active{
+        display:block;
+        margin-top: 0px ;
+    }
+}
+@media screen and (max-width:1124px) {
+    .nav-bar{
+        width: 100px;
+        display: flex;
+        align-content: flex-end; 
+    }
+    .nav-bar .sidebar--item{
+        display: none;
+    }
+    .nav-bar .ic1{
+        margin: 30px 0px 100px 0px;
+    }
+    .nav-bar .nav-items a{
+        padding: 10px 10px 10px 0px;
+        margin: 0px 0px 10px 10px;
+        transition: .5s;
+    }
+    .the-left{
+        width: 130px;
+    }
+    
+    .ptm4, .water{
+        display: none;
+    }
+    .mg1{
+        width: 100%;
+    }
+    
+}
