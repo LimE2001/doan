@@ -1,3 +1,4 @@
+const socket = io('http://localhost:3002');
 var T1=3000;
 var nda = 0;
 function load(){

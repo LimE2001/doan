@@ -1,3 +1,4 @@
+const socket = io('http://localhost:3002');
 let menu = document.querySelector('.menu')
 let navbar = document.querySelector('.nav-bar')
 let left = document.querySelector('.the-left')
