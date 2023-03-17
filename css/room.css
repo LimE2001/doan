@@ -21,3 +21,40 @@
     border-top-right-radius: 50px;
     box-shadow: 10px -10px 0 6px #f7f7f7;
 }
+.r1{
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    height: auto;
+}
+.mg1{
+    margin: auto;
+    padding: 0px 15px 0px 15px;
+}
+.mg2{
+    margin: 0px 0px 0px 0px;
+    padding: 0px 15px 0px 15px;
+}
+.ptc1{
+    background-color: #ffffff;
+    margin: 0px 0px 0px 0px;
+    padding: 20px 20px 20px 20px;
+    height: 270px;
+    border-radius: 50px;
+    box-shadow: 5px 5px 5px rgba(54, 52, 54, 0.315);
+}
+.ptc2{
+    background-color: #ffffff;
+    margin: 250px 0px 0px 0px;
+    padding: 20px 20px 20px 20px;
+    height: 270px;
+    border-radius: 50px;
+    box-shadow: 5px 5px 5px rgba(54, 52, 54, 0.315);
+}
+.ptc3{
+    background-color:rgb(252, 252, 252);
+    height: 540px;
+    margin: 125px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    border-radius: 50px;
+    box-shadow: 5px 5px 5px rgba(54, 52, 54, 0.315);
+}
