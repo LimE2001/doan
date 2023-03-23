@@ -9,8 +9,8 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../public/css/index.css">
     <link rel="stylesheet" href="../public/css/db.css">
-    <link rel="icon" href="../img/3.png" type="image/x-icon">
-    <title>© coppyright by LimE &#128151; ʕ´•ᴥ•`ʔ</title>
+    <link rel="icon" href="../public/img/3.png" type="image/x-icon">
+    <title>IOT &#128151; ʕ´•ᴥ•`ʔ</title>
     <script src="http://localhost:3002/socket.io/socket.io.js"></script>
     <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
@@ -73,42 +73,77 @@
                 <div class="row mg">
                     <div class="col-sm-9 mg1">
                         <div class="row m1">
-                            <div class="col-sm-3 ptm1">
+                            <div class="col-lg-3 col-md-6 col-sm-12 ptm1">
                                 <div class="ptc1">
-                                    <p>Quantity:</p>
+                                    <p>Temp 1:</p>
+                                    <i class="fas fa-temperature-low icon1 ic1"></i>
                                 </div>
                             </div>
-                            <div class="col-sm-3 ptm1">
+                            <div class="col-lg-3 col-md-6 col-sm-12 ptm1">
                                 <div class="ptc1">
-                                    <p>Quantity:</p>
+                                    <p>Temp 2:</p>
+                                    <i class="fas fa-temperature-low icon1 ic1"></i>
                                 </div>
                             </div>
-                            <div class="col-sm-3 ptm1">
+                            <div class="col-lg-3 col-md-6 col-sm-12 ptm1">
                                 <div class="ptc1">
                                     <p>Humidity 1:</p>
                                     <i class="fas fa-burn icon1 ic1"></i>
                                 </div>
                             </div>
-                            <div class="col-sm-3 ptm1">
+                            <div class="col-lg-3 col-md-6 col-sm-12 ptm1">
                                 <div class="ptc1">
                                     <p>Humidity 2:</p>
                                     <i class="fas fa-burn icon1 ic1"></i>
                                 </div>
                             </div>
-                            <div class="col-sm-6 ptm2">
+                            <div class="col-md-6 col-sm-12 ptm2">
                                 <div class="row ptc2">
-                                    <p>Temp 1:</p>
-                                    <i class="fas fa-temperature-low icon1 ic1"></i>
+                                    <p>Quantity:</p>
+                                    <div>
+                                        
+                                    </div>
                                 </div>
                                 <div class="row ptc2">
-                                    <p>Temp 2:</p>
-                                    <i class="fas fa-temperature-low icon1 ic1"></i>
+                                    <p>Messenger:</p>
+                                    <p></p>
                                 </div>
                             </div>
-                            <div class="col-sm-6 ptm2">
-                                <div class="ptc3">
-                                    <p>Light:</p>
-                                    <i class="far fa-lightbulb icon1 ic1"></i>
+                            <div class="col-md-6 col-sm-12 ptm2">
+                                <div class="row ptc3">
+                                    <div class="col-sm-8 ptl">
+                                        <div>
+                                            <p>Light 1:</p>
+                                            <i class="far fa-lightbulb icon1 ic1"></i>
+                                        </div>
+                                        <div>
+                                            <p>Light 2:</p>
+                                            <i class="far fa-lightbulb icon1 ic1"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4 ptbt">
+                                        <div>
+                                            <p>Lamp 1:</p>
+                                            <div id="switch">
+                                                <div id="e1"><i class="far fa-lightbulb icon1"></i></div>
+                                                <div><input type="checkbox" class="switch-toggle" id="check"></div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <p>Lamp 2:</p>
+                                            <div id="switch">
+                                                <div id="e1"><i class="far fa-lightbulb icon1"></i></div>
+                                                <div><input type="checkbox" class="switch-toggle" id="check"></div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <p>Fan:</p>
+                                            <div id="switch">
+                                                <div id="e1"><i class="far fa-lightbulb icon1"></i></div>
+                                                <div><input type="checkbox" class="switch-toggle" id="check"></div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col ptm3">
@@ -129,10 +164,10 @@
                         <div class="water"></div>
                     </div>
                 </div>
+                <footer>© Coppyright by LimE</footer>
             </div>
         </div>
     </div>
-
 <script src="../public/js/index.js"></script>
 <script src="../public/js/db.js"></script>
 </body>

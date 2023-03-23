@@ -60,6 +60,8 @@ body{
     padding: 10px 10px 10px 0px;
     margin: 0px 0px 10px 10px; 
     transition: 0.3s;
+    background-color: #00000000;
+    
 }
 a{
     text-decoration: none;
@@ -87,6 +89,9 @@ li{
     padding: 10px 10px 10px 20px;
     border-radius: 60px 0px 0px 60px;
     transition: 0.3s;
+}
+.nav-bar.active .nav-items a:hover{
+    color: rgb(255, 255, 255);
 }
 .icon2{
     position: relative;
@@ -133,4 +138,56 @@ li{
     padding: 0px 0px 0px 0px;
     box-shadow: 5px 5px 5px rgba(54, 52, 54, 0.315);
 }
+#switch{
+    display: flex;
+    justify-content:space-between;
+  }
+  .switch-toggle{
+    width: 100px;
+    height: 40px;
+    appearance: none;
+    background: rgb(165, 165, 165);
+    border-radius: 20px;
+    position: relative;
+    border: 5px inset rgb(167, 167, 167);
+    box-shadow: inset 0px 0px 20px rgb(0, 0, 0);
+  }
+  .switch-toggle::before{
+    position:absolute;
+    content: "";
+    width: 80%;
+    height: 30%;
+    border-radius: 50%;
+    top: 33%;
+    left: 10%;
+    border-radius: 30px;
+    box-shadow: inset 0px 0px 30px rgba(56, 56, 56, 0.685);
+    transition: 0.5s;
+    background-color: rgb(71, 71, 71);
+    transition: 0.5s;
+  }
+  .switch-toggle::after{
+    content: "";
+    width: 55%;
+    height: 100%;
+    position: absolute;
+    background: rgb(202, 202, 202);
+    box-shadow: inset 0px 0px 30px rgba(56, 56, 56, 0.685);
+    top:0px;
+    left: 0px;
+    border-radius: 30px;
+    transition: 0.5s;
+  }
+  .switch-toggle:checked{
+  }
+  .switch-toggle:checked::before{
+    background-color:rgb(204, 0, 255);
+    transition: 0.5s;
+  }
+  .switch-toggle:checked::after{
+    left: 45%;
+    background-color:rgb(174, 0, 218);
+    transition: 0.5s;
+  }
+  
 
