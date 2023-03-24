@@ -9,6 +9,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../public/css/index.css">
     <link rel="stylesheet" href="../public/css/db.css">
+    <link rel="stylesheet" href="../chart/chart-quan.css">
     <link rel="icon" href="../public/img/3.png" type="image/x-icon">
     <title>IOT &#128151; ʕ´•ᴥ•`ʔ</title>
     <script src="http://localhost:3002/socket.io/socket.io.js"></script>
@@ -19,7 +20,7 @@
 <body>
     <div class="LimE-container">
         <div class="row">
-            <div class="col-sm-2 the-left">
+            <div class="col-sm-2 col-2 the-left">
                 <section class="nav-bar">
                     <div>
                         <ul class="nav-items">
@@ -76,70 +77,96 @@
                             <div class="col-lg-3 col-md-6 col-sm-12 ptm1">
                                 <div class="ptc1">
                                     <p>Temp 1:</p>
-                                    <i class="fas fa-temperature-low icon1 ic1"></i>
+                                    <div class="row">
+                                        <i class="col fas fa-temperature-low icon1 ic2 ic-temp"></i>
+                                        <div id="temp-1" class="col val-size">???°C</div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-6 col-sm-12 ptm1">
                                 <div class="ptc1">
                                     <p>Temp 2:</p>
-                                    <i class="fas fa-temperature-low icon1 ic1"></i>
+                                    <div class="row">
+                                        <i class="col fas fa-temperature-low icon1 ic2 ic-temp"></i>
+                                        <div id="temp-2" class="col val-size">???°C</div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-6 col-sm-12 ptm1">
                                 <div class="ptc1">
                                     <p>Humidity 1:</p>
-                                    <i class="fas fa-burn icon1 ic1"></i>
+                                    <div class="row">
+                                        <i class="col fas fa-burn icon1 ic2 ic-humi"></i>
+                                        <div id="humi-1" class="col val-size">???%</div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-6 col-sm-12 ptm1">
                                 <div class="ptc1">
                                     <p>Humidity 2:</p>
-                                    <i class="fas fa-burn icon1 ic1"></i>
+                                    <div class="row">
+                                        <i class="col fas fa-burn icon1 ic2 ic-humi"></i>
+                                        <div id="humi-2" class="col val-size">???%</div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-md-6 col-sm-12 ptm2">
+                            <div class="col-lg-6 col-md-12 ptm2">
                                 <div class="row ptc2">
                                     <p>Quantity:</p>
                                     <div>
-                                        
+                                        <div class="chart-quan">
+                                            <div data-stepped-bar></div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="row ptc2">
                                     <p>Messenger:</p>
-                                    <p></p>
+                                    <div class="mes-note">
+                                        <p id="" class="mes p1 p-o">Hello, welcome to IOT :))</p>
+                                        <p id="" class="mes p2 p-o">Nguyễn Thành Liêm.</p>
+                                        <p id="" class="mes p3 p-o">Nguyễn Đắc Đạt.</p>
+                                        <p id="" class="mes p4 p-o">Test Messenger.</p>
+                                        <p id="" class="mes p5 p-o">The Smart Farm System.</p>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-md-6 col-sm-12 ptm2">
+                            <div class="col-lg-6 col-md-12 ptm2">
                                 <div class="row ptc3">
-                                    <div class="col-sm-8 ptl">
-                                        <div>
+                                    <div class="col-md-8 col-sm-6">
+                                        <div class="ptl">
                                             <p>Light 1:</p>
-                                            <i class="far fa-lightbulb icon1 ic1"></i>
+                                            <div class="row">
+                                                <i class="col far fa-lightbulb icon1 ic2 ic-light"></i>
+                                                <div id="light-1" class="col-sm-8 val-light">???lux</div>
+                                            </div>
                                         </div>
-                                        <div>
+                                        <div class="ptl">
                                             <p>Light 2:</p>
-                                            <i class="far fa-lightbulb icon1 ic1"></i>
+                                            <div class="row">
+                                                <i class="col far fa-lightbulb icon1 ic2 ic-light"></i>
+                                                <div id="light-1" class="col-sm-8 val-light">???lux</div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="col-sm-4 ptbt">
-                                        <div>
+                                    <div class="col-md-4 col-sm-6">
+                                        <div class="bt">
                                             <p>Lamp 1:</p>
                                             <div id="switch">
-                                                <div id="e1"><i class="far fa-lightbulb icon1"></i></div>
+                                                <div id="e1"><i id="li" class="far fa-lightbulb icbt"></i></div>
                                                 <div><input type="checkbox" class="switch-toggle" id="check"></div>
                                             </div>
                                         </div>
-                                        <div>
+                                        <div class="bt">
                                             <p>Lamp 2:</p>
                                             <div id="switch">
-                                                <div id="e1"><i class="far fa-lightbulb icon1"></i></div>
                                                 <div><input type="checkbox" class="switch-toggle" id="check"></div>
+                                                <div id="e1"><i id="li" class="far fa-lightbulb icbt"></i></div>
                                             </div>
                                         </div>
-                                        <div>
+                                        <div class="bt">
                                             <p>Fan:</p>
                                             <div id="switch">
-                                                <div id="e1"><i class="far fa-lightbulb icon1"></i></div>
+                                                <div id="e2"><i id="li" class="fa-sharp fa-solid fa-power-off icbt2"></i></div>
                                                 <div><input type="checkbox" class="switch-toggle" id="check"></div>
                                             </div>
                                         </div>
@@ -148,7 +175,8 @@
                             </div>
                             <div class="col ptm3">
                                 <div class="ptc4">
-                                    Chart:
+                                    <p>Chart</p>
+                                    <div class="ptcc"><canvas id="myChart" style="width:70%;height: 30px;"></canvas></div>
                                 </div>
                             </div>
                         </div>
@@ -159,7 +187,16 @@
                                 <img class="avt" src="../public/img/3.png" alt="AVT">
                                 <p><b>WELCOME TO IOT</b></p>
                             </div>
-                            <div class="ptc6"></div>
+                            <div class="ptc6">
+                                <div class="row">
+                                    <div class="col"></div>
+                                    <div class="col"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col"></div>
+                                    <div class="col"></div>
+                                </div>
+                            </div>
                         </div>
                         <div class="water"></div>
                     </div>
@@ -170,5 +207,6 @@
     </div>
 <script src="../public/js/index.js"></script>
 <script src="../public/js/db.js"></script>
+<script src="../chart/chart-quan.js"></script>
 </body>
 </html>

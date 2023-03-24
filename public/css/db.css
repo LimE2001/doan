@@ -80,13 +80,29 @@
 .ptc3::before{
     content: '';
     position: absolute;
-    top:35px;
+    top:9%;
     left: 60%;
     width: 1px;
     height: 300px;
     background-color:#e6e6e6;
 }
 .ptl{
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    height: 50%;
+}
+.bt{
+    height: 33%;
+}
+.icbt{
+    font-size: 40px;
+    margin: 0px 0px 0px 0px;
+    display: flex;
+}
+.icbt2{
+    font-size: 40px;
+    margin: 0px 0px 0px -5px;
+
 }
 .ptc4{
     background-color:#fff;
@@ -165,9 +181,50 @@
                 scale(0.7)
                 rotate(20deg);
 }
-.chart{
-    max-width: 25%;
-
+.mes{
+    color: #586c8a;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: 
+    typing 5s steps(200, end) forwards;
+    width: 0;
+}
+    @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+.mes-note p{
+    margin: 0px;
+}
+.p1{
+    animation-delay:0;
+}
+.p2{
+    animation-delay:5s;
+}
+.p3{
+    animation-delay:10s;
+}
+.p4{
+    animation-delay:15s;
+}
+.p5{
+    animation-delay:20s;
+}
+.mes-note{
+    margin: -15px 0px 0px 15px;
+}
+.val-size{
+    font-size:xx-large;
+    margin: -20px 0px 0px 0px;
+    display: flex;
+    justify-content: flex-end; 
+    /* justify-content: center; */
+}
+.val-light{
+    font-size:xx-large;
+    margin: -20px 0px 0px 0px;
+    /* justify-content: center; */
 }
 @media screen and (max-width:1620px) {
     .mg1{
@@ -188,6 +245,13 @@
     }
     .mg2.active{
         display:none;
+    }
+    #li{
+        display: none;
+    }
+    #switch{
+        display: flex;
+        justify-content: flex-start;
     }
 }
 @media screen and (max-width:1124px) {
@@ -217,5 +281,47 @@
     .mg1{
         width: 100%;
     }
+}
+@media screen and (max-width:991px) {
+    .ptc3{
+        margin: -15px 15px 30px 15px ;
+    }
+    .ptcc{
+        display: none;
+    }
+}
+@media screen and (max-width:767px) {
+    .ptc3::before{
+        content: '';
+        position: absolute;
+        top:35px;
+        left: 50%;
+        width: 1px;
+        height: 300px;
+        background-color:#e6e6e6;
+    }
+    .val-light{
+        display: flex;
+        justify-content: center;
+        margin: 10px;
+    }
+    .ic-light{
+        display: none;
+    }
     
+    
+}
+@media screen and (max-width:575px) {
+    .bt{
+        display: none;
+    }
+    .ptc3::before{
+        display: none;
+    }
+    .val-light{
+        margin: 0px;
+    }
+    .mes{
+        display:none ;
+    }
 }
